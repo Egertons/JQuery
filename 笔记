@@ -1,0 +1,43 @@
+JQuery = JavaScript + Query(查询);
+
+使用JQuery必须引入JQuery库。
+
+JQuery中的$其本质就是一个函数。
+
+$是JQuery的“核心函数”,能完成许多工作。
+    其中传入不同的内容，从而完成不同的工作。
+        当传入“函数”时：
+            表示当页面加载完成后，执行该函数。
+            相当于window.onload = function(){}
+        当传入“HTML字符串”时：
+            会帮我们创建这些HTML标签对象。
+        当传入“选择器字符串”时：
+            会根据所填入的选择器类型以及其参数进行对应的查询。
+            Eg:
+                $("#demo");  查询 id = demo 的相应对象。
+                $("标签名");    标签名选择器。根据指定的标签名查询标签对象。
+                $(".class属性值");  类型选择器，可以根据class属性来查询标签对象。
+        当传入参数为[DOM对象]时：
+            将DOM对象包装为jQuery对象返回。
+
+JQuery对象和DOM对象的区别：
+    1.通过各种原生JS的方法查询或新建出来的对象都是DOM对象。
+        通过JQuery的API查询得出的对象则是JQuery对象。
+        通过JQuery对象包装的DOM对象，也是JQuery对象。
+    2.JQuery的对象alert之后显示结果为：[object Object]
+
+
+JQuery对象的“本质”：
+    其本质是一个元素为DOM对象的数组 + JQuery提供的一系列功能函数。
+
+JQuery对象 和 DOM对象的方法和属性都不通用。
+
+DOM对象和JQuery对象之间互转：
+    DOM——>JQuery
+        1.先有DOM对象
+        2.$(DOM对象);即可
+
+    JQuery——>DOM
+        1.现有JQuery对象
+        2.(因为JQuery对象的本质就是DOM对象的数组，所以只需要循环遍历取出来就可以了)
+            JQuery对象[下标]取出相应的DOM对象。
