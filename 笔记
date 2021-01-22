@@ -41,3 +41,6 @@ DOM对象和JQuery对象之间互转：
         1.现有JQuery对象
         2.(因为JQuery对象的本质就是DOM对象的数组，所以只需要循环遍历取出来就可以了)
             JQuery对象[下标]取出相应的DOM对象。
+
+
+在each遍历的function函数中有一个this对象，该对象就是每次遍历中所对应的DOM对象。
